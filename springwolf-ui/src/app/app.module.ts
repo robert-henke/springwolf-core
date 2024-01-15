@@ -4,7 +4,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-import { HighlightModule, HIGHLIGHT_OPTIONS } from "ngx-highlightjs";
+import { HIGHLIGHT_OPTIONS, HighlightModule } from "ngx-highlightjs";
 import { environment } from "./../environments/environment";
 import { AppComponent } from "./app.component";
 import { ChannelMainComponent } from "./channels/channel-main/channel-main.component";
@@ -21,6 +21,7 @@ import { PublisherService } from "./shared/publisher.service";
 import { FormsModule } from "@angular/forms";
 import { JsonComponent } from "./shared/components/json/json.component";
 import { AsyncApiMapperService } from "./shared/asyncapi-mapper.service";
+import { MarkdownModule, provideMarkdown } from "ngx-markdown";
 
 @NgModule({
   declarations: [
@@ -41,6 +42,8 @@ import { AsyncApiMapperService } from "./shared/asyncapi-mapper.service";
     HighlightModule,
     HttpClientModule,
     FormsModule,
+    MarkdownModule.forRoot(),
+    MarkdownModule.forChild(),
     environment.production
       ? []
       : HttpClientInMemoryWebApiModule.forRoot(MockServer, { delay: 100 }),
@@ -49,6 +52,7 @@ import { AsyncApiMapperService } from "./shared/asyncapi-mapper.service";
     AsyncApiService,
     AsyncApiMapperService,
     PublisherService,
+    provideMarkdown(),
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {

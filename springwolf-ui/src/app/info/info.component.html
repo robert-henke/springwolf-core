@@ -5,4 +5,4 @@
   -
   <a href="javascript:void(0);" (click)="download()">AsyncAPI JSON file</a>
 </h5>
-<p *ngIf="info?.description">{{ info.description }}</p>
+<p *ngIf="info?.description"><markdown [data]="info.description"></markdown></p>

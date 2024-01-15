@@ -4,6 +4,12 @@
     "properties" : {
       "empty" : {
         "type" : "boolean"
+      },
+      "first" : {
+        "type" : "string"
+      },
+      "last" : {
+        "type" : "string"
       }
     },
     "example" : [ "string" ],

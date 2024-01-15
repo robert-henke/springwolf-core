@@ -12,7 +12,7 @@
         <h3>{{ schema.value.title }}</h3>
       </mat-panel-title>
       <mat-panel-description>
-        {{ schema.value.description }}
+        <markdown [data]="schema.value.description"></markdown>
       </mat-panel-description>
     </mat-expansion-panel-header>
     <h4>

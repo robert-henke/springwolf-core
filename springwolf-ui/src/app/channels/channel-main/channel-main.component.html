@@ -2,7 +2,9 @@
 <section>
   <mat-divider></mat-divider>
   <div *ngIf="operation.message.description">
-    <h4>{{ operation.message.description }}</h4>
+    <p>
+      <markdown>{{ operation.message.description }}</markdown>
+    </p>
     <mat-divider></mat-divider>
   </div>
   <mat-tab-group animationDuration="0ms">
