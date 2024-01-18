@@ -31,7 +31,7 @@
           >({{ property.value.format }})</span
         >
         <div class="description">
-          <markdown [data]="property.value.description"></markdown>
+          <markdown mermaid [data]="property.value.description"></markdown>
         </div>
         <span class="example" *ngIf="property.value.example"
           >example: {{ property.value.example.value }}</span

@@ -22,8 +22,10 @@
     "@angular/router": "^17.0.2",
     "font-awesome": "^4.7.0",
     "marked": "^9.1.6",
+    "mermaid": "^10.7.0",
     "ngx-highlightjs": "^10.0.0",
     "ngx-markdown": "^17.1.1",
+    "prismjs": "^1.29.0",
     "rxjs": "^7.8.1",
     "zone.js": "^0.14.2"
   },

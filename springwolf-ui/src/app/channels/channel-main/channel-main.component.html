@@ -3,7 +3,7 @@
   <mat-divider></mat-divider>
   <div *ngIf="operation.message.description">
     <p>
-      <markdown>{{ operation.message.description }}</markdown>
+      <markdown mermaid [data]="operation.message.description"></markdown>
     </p>
     <mat-divider></mat-divider>
   </div>
