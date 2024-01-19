@@ -21,26 +21,30 @@
             >
           </span>
         </ng-container>
+
         <span class="type" *ngIf="property.value.type != 'array'">{{
           property.value.type
         }}</span>
         <span class="type" *ngIf="property.value.refTitle">
           <a [href]="property.value.anchorUrl">{{ property.value.refTitle }}</a>
         </span>
+
         <span class="format" *ngIf="property.value.format"
           >({{ property.value.format }})</span
         >
-        <div class="description">
-          <markdown mermaid [data]="property.value.description"></markdown>
+
+        <div class="example" *ngIf="property.value.example">
+          example: {{ property.value.example.value }}
         </div>
-        <span class="example" *ngIf="property.value.example"
-          >example: {{ property.value.example.value }}</span
-        >
         <mat-select *ngIf="property.value.enum" placeholder="Enum">
           <mat-option *ngFor="let enum of property.value.enum" [value]="enum"
             >{{ enum }}
           </mat-option>
         </mat-select>
+
+        <div class="description">
+          <markdown mermaid [data]="property.value.description"></markdown>
+        </div>
       </td>
     </tr>
   </tbody>

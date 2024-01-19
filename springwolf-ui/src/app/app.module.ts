@@ -4,7 +4,6 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-import { HIGHLIGHT_OPTIONS, HighlightModule } from "ngx-highlightjs";
 import { environment } from "./../environments/environment";
 import { AppComponent } from "./app.component";
 import { ChannelMainComponent } from "./channels/channel-main/channel-main.component";
@@ -39,11 +38,9 @@ import { MarkdownModule, provideMarkdown } from "ngx-markdown";
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HighlightModule,
     HttpClientModule,
     FormsModule,
     MarkdownModule.forRoot(),
-    MarkdownModule.forChild(),
     environment.production
       ? []
       : HttpClientInMemoryWebApiModule.forRoot(MockServer, { delay: 100 }),
@@ -53,15 +50,6 @@ import { MarkdownModule, provideMarkdown } from "ngx-markdown";
     AsyncApiMapperService,
     PublisherService,
     provideMarkdown(),
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        coreLibraryLoader: () => import("highlight.js/lib/core"),
-        languages: {
-          json: () => import("highlight.js/lib/languages/json"),
-        },
-      },
-    },
   ],
   bootstrap: [AppComponent],
 })

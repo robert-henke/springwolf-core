@@ -11,9 +11,9 @@ import static io.swagger.v3.oas.annotations.media.Schema.RequiredMode.REQUIRED;
 @Schema(
         description =
                 """
-        Example payload model with markdown description. This allows to use e.g.
-        **bold**, *cursive* or <u>underlined</u> styled text.
-        """)
+                        Example payload model demonstrating markdown text styling:
+                        **bold**, *cursive* and <u>underlined</u>
+                        """)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,37 +21,21 @@ public class ExamplePayloadDto {
     @Schema(
             description =
                     """
+                            Some string field.
 
-            Some string field with markdown description. This allows to use:
+                            ### Details with Markdown
 
-            <h1>header</h1>
-
-            **bold**, *cursive*
-
-            ```
-            code formatting
-            ```
-
-            also supports code highlighting for `json`, `http`, `java` languages
-
-            ```json
-
-            {
-            	"key1":"value1",
-            	"key2":"value2"
-            }
-
-            ```
-
-            <ul>
-            <li>enumerations/lists</li>
-            <li>other markdown styles</li>
-            </ul>
-
-            It is also possible to add images.
-            <img src="./assets/springwolf-logo.png" alt="Springwolf" height="50"/>
-
-            """,
+                            - **bold**
+                            - *cursive*
+                            - images: <img src="./assets/springwolf-logo.png" alt="Springwolf" height="50"/>
+                            - and code blocks (json, http, java)
+                              ```json
+                              {
+                                "key1":"value1",
+                                "key2":"value2"
+                              }
+                              ```
+                            """,
             example = "some string value",
             requiredMode = REQUIRED)
     private String someString;

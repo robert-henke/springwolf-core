@@ -35,7 +35,8 @@
               "./node_modules/prismjs/prism.js",
               "./node_modules/prismjs/components/prism-json.min.js",
               "./node_modules/prismjs/components/prism-http.min.js",
-              "./node_modules/prismjs/components/prism-java.min.js"
+              "./node_modules/prismjs/components/prism-java.min.js",
+              "./node_modules/prismjs/components/prism-kotlin.min.js"
             ]
           },
           "configurations": {
