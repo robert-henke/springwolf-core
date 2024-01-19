@@ -44,6 +44,9 @@ public class ExamplePayloadDto {
             <li>enumerations/lists</li>
             <li>other markdown styles</li>
             </ul>
+            
+            It is also possible to add images.
+            <img src="./assets/springwolf-logo.png" alt="Springwolf" height="50"/>
             		
             """, example = "some string value", requiredMode = REQUIRED)
     private String someString;
