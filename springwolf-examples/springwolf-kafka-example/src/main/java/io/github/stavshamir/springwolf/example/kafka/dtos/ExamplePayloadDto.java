@@ -1,54 +1,59 @@
 // SPDX-License-Identifier: Apache-2.0
 package io.github.stavshamir.springwolf.example.kafka.dtos;
 
-import static io.swagger.v3.oas.annotations.media.Schema.RequiredMode.REQUIRED;
-
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Schema(description = """
+import static io.swagger.v3.oas.annotations.media.Schema.RequiredMode.REQUIRED;
+
+@Schema(
+        description =
+                """
         Example payload model with markdown description. This allows to use e.g.
         **bold**, *cursive* or <u>underlined</u> styled text.
-        """
-)
+        """)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class ExamplePayloadDto {
-    @Schema(description = """
-              
+    @Schema(
+            description =
+                    """
+
             Some string field with markdown description. This allows to use:
-            		
+
             <h1>header</h1>
-            		
+
             **bold**, *cursive*
-            		
+
             ```
             code formatting
             ```
-            
+
             also supports code highlighting for `json`, `http`, `java` languages
-            
+
             ```json
-            
+
             {
             	"key1":"value1",
             	"key2":"value2"
             }
-            
+
             ```
-            		
+
             <ul>
             <li>enumerations/lists</li>
             <li>other markdown styles</li>
             </ul>
-            
+
             It is also possible to add images.
             <img src="./assets/springwolf-logo.png" alt="Springwolf" height="50"/>
-            		
-            """, example = "some string value", requiredMode = REQUIRED)
+
+            """,
+            example = "some string value",
+            requiredMode = REQUIRED)
     private String someString;
 
     @Schema(description = "Some long field", example = "5")
