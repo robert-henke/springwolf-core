@@ -28,6 +28,17 @@ public class ExamplePayloadDto {
             ```
             code formatting
             ```
+            
+            also supports code highlighting for `json`, `http`, `java` languages
+            
+            ```json
+            
+            {
+            	"key1":"value1",
+            	"key2":"value2"
+            }
+            
+            ```
             		
             <ul>
             <li>enumerations/lists</li>
