@@ -3,7 +3,7 @@
   "info": {
     "title": "Springwolf example project - Kafka",
     "version": "1.0.0",
-    "description": "Springwolf example project to demonstrate springwolfs abilities",
+    "description": "Springwolf example project to demonstrate springwolfs abilities. <h3>Markdown</h3>Description fields support **markdown** *syntax*.",
     "contact": {
       "name": "springwolf",
       "url": "https://github.com/springwolf/springwolf-core",
@@ -747,7 +747,7 @@
           "name": "io.github.stavshamir.springwolf.example.kafka.dtos.AnotherPayloadDto",
           "properties": {
             "example": {
-              "description": "Example payload model",
+              "description": "Example payload model with markdown description. This allows to use e.g.\n**bold**, *cursive* or <u>underlined</u> styled text.\n",
               "name": "io.github.stavshamir.springwolf.example.kafka.dtos.ExamplePayloadDto",
               "properties": {
                 "someEnum": {
@@ -767,7 +767,7 @@
                   "type": "integer"
                 },
                 "someString": {
-                  "description": "Some string field",
+                  "description": "\nSome string field with markdown description. This allows to use:\n\n<h1>header</h1>\n\n**bold**, *cursive*\n\n```\ncode formatting\n```\n\nalso supports code highlighting for `json`, `http`, `java` languages\n\n```json\n\n{\n\t\"key1\":\"value1\",\n\t\"key2\":\"value2\"\n}\n\n```\n\n<ul>\n<li>enumerations/lists</li>\n<li>other markdown styles</li>\n</ul>\n\nIt is also possible to add images.\n<img src=\"./assets/springwolf-logo.png\" alt=\"Springwolf\" height=\"50\"/>\n\n",
                   "name": "someString",
                   "type": "string"
                 }
@@ -815,11 +815,11 @@
           },
           "someString": {
             "type": "string",
-            "description": "Some string field",
+            "description": "\nSome string field with markdown description. This allows to use:\n\n<h1>header</h1>\n\n**bold**, *cursive*\n\n```\ncode formatting\n```\n\nalso supports code highlighting for `json`, `http`, `java` languages\n\n```json\n\n{\n\t\"key1\":\"value1\",\n\t\"key2\":\"value2\"\n}\n\n```\n\n<ul>\n<li>enumerations/lists</li>\n<li>other markdown styles</li>\n</ul>\n\nIt is also possible to add images.\n<img src=\"./assets/springwolf-logo.png\" alt=\"Springwolf\" height=\"50\"/>\n\n",
             "example": "some string value"
           }
         },
-        "description": "Example payload model",
+        "description": "Example payload model with markdown description. This allows to use e.g.\n**bold**, *cursive* or <u>underlined</u> styled text.\n",
         "example": {
           "someEnum": "FOO2",
           "someLong": 5,
@@ -827,7 +827,7 @@
         },
         "x-json-schema": {
           "$schema": "https://json-schema.org/draft-04/schema#",
-          "description": "Example payload model",
+          "description": "Example payload model with markdown description. This allows to use e.g.\n**bold**, *cursive* or <u>underlined</u> styled text.\n",
           "name": "io.github.stavshamir.springwolf.example.kafka.dtos.ExamplePayloadDto",
           "properties": {
             "someEnum": {
@@ -847,7 +847,7 @@
               "type": "integer"
             },
             "someString": {
-              "description": "Some string field",
+              "description": "\nSome string field with markdown description. This allows to use:\n\n<h1>header</h1>\n\n**bold**, *cursive*\n\n```\ncode formatting\n```\n\nalso supports code highlighting for `json`, `http`, `java` languages\n\n```json\n\n{\n\t\"key1\":\"value1\",\n\t\"key2\":\"value2\"\n}\n\n```\n\n<ul>\n<li>enumerations/lists</li>\n<li>other markdown styles</li>\n</ul>\n\nIt is also possible to add images.\n<img src=\"./assets/springwolf-logo.png\" alt=\"Springwolf\" height=\"50\"/>\n\n",
               "name": "someString",
               "type": "string"
             }
