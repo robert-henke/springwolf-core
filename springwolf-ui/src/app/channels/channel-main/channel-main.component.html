@@ -112,7 +112,7 @@
       </h4>
       <app-schema *ngIf="headers" [schema]="headers"></app-schema>
       <div class="flex-column">
-        <app-json [json]="headersExample?.value"></app-json>
+        <app-json [data]="headersExample?.rawValue"></app-json>
       </div>
     </mat-tab>
     <mat-tab label="Operation Bindings">

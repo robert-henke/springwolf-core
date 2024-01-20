@@ -7,12 +7,9 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class JsonComponent implements OnInit {
   @Input() data: any;
-  @Input() json: string;
+  json: string;
 
   ngOnInit(): void {
-    this.json =
-      this.json === undefined
-        ? "```json\n" + JSON.stringify(this.data, null, 2) + "\n```"
-        : this.json;
+    this.json = "```json\n" + JSON.stringify(this.data, null, 2) + "\n```";
   }
 }
