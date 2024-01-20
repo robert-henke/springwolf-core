@@ -28,7 +28,9 @@ class OpenApiGeneratorSystemTest {
 
         InputStream actualStream = this.getClass().getResourceAsStream("/openapi-generated.json");
         String actual = IOUtils.toString(actualStream, StandardCharsets.UTF_8)
-                .replace("\\u003d", "="); // openapi generator replaces equal (=) with its unicode representation
+                .replace("\\u003c", "<") // openapi generator replaces "<" with its unicode representation
+                .replace("\\u003d", "=") // openapi generator replaces equal (=) with its unicode representation
+                .replace("\\u003e", ">"); // openapi generator replaces ">" with its unicode representation
 
         // openapi generator uses a different formatter, therefore removing spaces and newlines during comparison
         assertEquals(expected.replaceAll("\\s", ""), actual.replaceAll("\\s", ""));
